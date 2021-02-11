@@ -1,0 +1,140 @@
+@import '../../styles/_variables.scss';
+
+body {
+  background-color: $light-gray-1;
+  height: auto;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+}
+
+.tip {
+  padding: 5px;
+  background-color: $dark-gray-2;
+  color: $white;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.text-block {
+  color: $dark-gray-1;
+  a {
+    color: $dark-gray-1;
+    &:hover {
+      color: $dark-gray-2;
+    }
+  }
+}
+
+.back {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+}
+
+.link {
+  display: inline-block;
+  @extend h3;
+  color: $dark-gray-1;
+  text-decoration: none;
+  margin-bottom: 12px;
+  &:first-of-type {
+    margin-top: none;
+  }
+  &:hover {
+    color: $dark-gray-2;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.landing__wrapper {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 18px;
+  right: 18px;
+  margin-top: 96px;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-height: 800px) {
+    margin-top: 62px;
+  }
+  @media (max-height: 700px) {
+    margin-top: 48px;
+  }
+  @media (max-height: 400px) {
+    margin-top: 36px;
+  }
+}
+
+.landing__upper {
+  flex-shrink: 0;
+  flex-basis: 184px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+
+  .heading {
+    color: $dark-gray-3;
+  }
+
+  .subheading {
+    margin-top: 18px;
+    color: $dark-gray-1;
+    max-width: 700px;
+  }
+}
+
+.landing__center {
+  flex-basis: 144px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin: 96px 0 96px 0;
+
+  .input--container {
+    margin-bottom: 18px;
+  }
+}
+
+.landing__lower {
+  flex-basis: 86px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 96px;
+
+  @media (max-height: 800px) {
+    margin-bottom: 62px;
+  }
+  @media (max-height: 700px) {
+    margin-bottom: 48px;
+  }
+  @media (max-height: 400px) {
+    margin-bottom: 36px;
+  }
+
+  .text-block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .primary-btn {
+    position: absolute;
+    bottom: 48px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+}

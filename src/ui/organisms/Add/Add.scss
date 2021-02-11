@@ -1,0 +1,17 @@
+.add__wrapper {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 800;
+  &:hover {
+    .tip {
+      display: block;
+    }
+  }
+  .tip {
+    display: none;
+    position: absolute;
+    bottom: -27px;
+    right: 0;
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../styles/_variables.scss';
+
+@font-face {
+  font-family: 'Lab Grotesque Light';
+  src: url('../../assets/fonts/LabGrotesque-Light.woff2') format('woff2'),
+    url('../../assets/fonts/LabGrotesque-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque Bold';
+  src: url('../../assets/fonts/LabGrotesque-Bold.woff2') format('woff2'),
+    url('../../assets/fonts/LabGrotesque-Bold.woff') format('woff');
+}
+
+.file-drop {
+  height: 100vh;
+  background-color: $white;
+}
+
+.file-drop-dragging-over-frame {
+  background-color: $light-gray-1;
+}
+
+.file-drop * {
+  outline: none;
+}
+
+.cursor {
+  &--grab {
+    cursor: grab;
+  }
+
+  &--grabbing {
+    cursor: grabbing;
+  }
+
+  &--default {
+    cursor: default;
+  }
+}

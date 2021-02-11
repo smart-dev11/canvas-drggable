@@ -1,0 +1,43 @@
+@import '../../../styles/_variables.scss';
+
+.input--container {
+  @include fade;
+  padding: 18px;
+  margin: 0 auto;
+  position: relative;
+  background-color: $white;
+  display: block;
+  border-radius: 2px;
+  border: 1px solid $light-gray-2;
+  max-width: 350px;
+  width: 90%;
+
+  &:hover {
+    border: 1px solid $light-gray-3;
+  }
+
+  &:focus-within {
+    border: 1px solid $light-gray-3;
+  }
+}
+
+.input--default {
+  @extend h2;
+  border: none;
+  color: $dark-gray-3;
+  background-color: $white;
+  width: 100%;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &::placeholder {
+    /* Most modern browsers support this now. */
+    color: $light-gray-3;
+  }
+}

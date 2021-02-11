@@ -1,0 +1,6 @@
+export { default as Header } from './Header/'
+export { default as CanvasOrganism } from './CanvasOrganism/'
+export { default as Menu } from './Menu/'
+export { default as Tools } from './Tools/'
+export { default as Avatars } from './Avatars/'
+export { default as Add } from './Add/'

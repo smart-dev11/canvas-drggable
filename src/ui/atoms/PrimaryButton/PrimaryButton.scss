@@ -1,0 +1,68 @@
+@import '../../../styles/_variables.scss';
+
+.primary-btn {
+  @extend h3;
+  @include fade;
+  line-height: 13px;
+  width: fit-content;
+  height: fit-content;
+  color: $dark-gray-2;
+  background-color: $light-gray-2;
+  border: 1px solid $light-gray-3;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+  padding: 8px;
+  &:hover {
+    background-color: $light-gray-3;
+  }
+
+  &.blue {
+    color: $white;
+    background-color: $light-blue;
+    border: 1px solid $blue;
+    &:hover {
+      background-color: $blue;
+    }
+  }
+
+  &.light {
+    background-color: $light-gray-1;
+    border: none;
+    &:hover {
+      background-color: $light-gray-2;
+    }
+  }
+
+  &.light-border {
+    background-color: $light-gray-1;
+    border: 1px solid $light-gray-2;
+    color: $dark-gray-1;
+    &:hover {
+      background-color: $light-gray-2;
+    }
+  }
+
+  &.white {
+    color: $dark-gray-1;
+    background-color: $white;
+    border: none;
+    &:hover {
+      background-color: $light-gray-1;
+    }
+  }
+
+  &.small {
+    @extend p;
+    line-height: 11px;
+    padding: 5px;
+  }
+
+  &.tool-active {
+    background-color: $light-gray-2;
+    border: none;
+    &:hover {
+      background-color: $light-gray-2;
+    }
+  }
+}

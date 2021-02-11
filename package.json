@@ -1,0 +1,75 @@
+{
+    "name": "moss-canvas-app",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "@types/jest": "^24.0.0",
+        "@types/lodash.debounce": "^4.0.6",
+        "@types/lodash.throttle": "^4.1.6",
+        "@types/node": "^12.0.0",
+        "@types/ramda": "^0.27.31",
+        "@types/react": "^16.9.0",
+        "@types/react-dom": "^16.9.0",
+        "@types/uuid": "^8.3.0",
+        "date-fns": "^2.15.0",
+        "firebase": "^7.17.1",
+        "konva": "^7.1.0",
+        "lodash.debounce": "^4.0.8",
+        "lodash.throttle": "^4.1.1",
+        "mobx": "^5.15.4",
+        "mobx-persist": "^0.4.1",
+        "mobx-react": "^6.2.5",
+        "node-sass": "^4.14.1",
+        "ramda": "^0.27.1",
+        "rc-progress": "^3.0.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-file-drop": "^3.0.7",
+        "react-konva": "^16.13.0-6",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "3.4.1",
+        "react-toastify": "^6.0.8",
+        "rxfire": "^3.13.5",
+        "rxjs": "^6.6.2",
+        "rxjs-hooks": "^0.6.2",
+        "tslib": "^2.0.3",
+        "typescript": "~3.7.2",
+        "use-image": "^1.0.6",
+        "uuid": "^8.3.0"
+    },
+    "scripts": {
+        "start": "cp .env-staging .env && yarn setDaemon:staging && react-scripts start",
+        "start:staging": "yarn start",
+        "start:custom": "react-scripts start",
+        "start:prod": "cp .env-live .env && yarn setDaemon:prod && react-scripts start",
+        "start:build": "cp .env-live .env && yarn setDaemon:prod && yarn build && npx http-server build -p 3003 --proxy http://localhost:3003?",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "deploy:staging": "cp .env-staging .env && yarn build && firebase use staging && firebase deploy",
+        "deploy:prod": "cp .env-live .env && yarn build && firebase use default && firebase deploy",
+        "setDaemon:staging": "/Library/Application\\ Support/Moss/loadStaging.sh",
+        "setDaemon:prod": "/Library/Application\\ Support/Moss/loadProduction.sh"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@types/react-router-dom": "^5.1.5"
+    }
+}

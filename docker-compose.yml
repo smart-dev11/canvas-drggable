@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: yarn start
+    volumes:
+      - .:/workspace
+      - /workspace/node_modules
+    ports:
+      - "3010:3000"
+    env_file:
+      - .env

@@ -1,0 +1,106 @@
+// Colors
+////////////////////////////////////////////////////////////////////////////////
+$white: #fcfcfc;
+$light-gray-1: #f2f2f2;
+$light-gray-2: #e3e3e3;
+$light-gray-3: #c5c5c5;
+$dark-gray-1: #818181;
+$dark-gray-2: #595959;
+$dark-gray-3: #2d2d2d;
+$black: #121212;
+$blue: #609bf4;
+$light-blue: #79aaf2;
+$red: #f5513b;
+
+// Typography
+////////////////////////////////////////////////////////////////////////////////
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-weight: 500;
+  src: url('../assets/fonts/LabGrotesque-Bold.woff2') format('woff2'),
+    url('../assets/fonts/LabGrotesque-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-weight: 300;
+  src: url('../assets/fonts/LabGrotesque-Light.woff2') format('woff2'),
+    url('../assets/fonts/LabGrotesque-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  font-weight: 200;
+  src: url('../assets/fonts/LabGrotesque-Thin.woff2') format('woff2'),
+    url('../assets/fonts/LabGrotesque-Thin.woff') format('woff');
+}
+
+* {
+  font-family: 'Lab Grotesque', 'Helvetica', sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 46px;
+  line-height: 48px;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: normal;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: normal;
+}
+
+p {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: normal;
+}
+
+// Breakpoints
+////////////////////////////////////////////////////////////////////////////////
+$breakpoints: (
+  'small': 550px,
+  'medium': 950px,
+  'large': 1440px,
+) !default;
+
+@mixin break-at($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Transition
+////////////////////////////////////////////////////////////////////////////////
+@mixin transition($prop, $time, $ease) {
+  -webkit-transition: $prop $time $ease;
+  -moz-transition: $prop $time $ease;
+  -o-transition: $prop $time $ease;
+  transition: $prop $time $ease;
+}
+
+@mixin fade() {
+  -webkit-transition: all 0.09s ease;
+  -moz-transition: all 0.09s ease;
+  -o-transition: all 0.09s ease;
+  transition: all 0.09s ease;
+}

@@ -1,0 +1,6 @@
+export { default as Home } from './Home/'
+export { default as Canvas } from './Canvas/'
+export { default as CreateCanvas } from './CreateCanvas/'
+export { default as EmailCode } from './EmailCode/'
+export { default as Install } from './Install/'
+export { default as ChooseName } from './ChooseName/'

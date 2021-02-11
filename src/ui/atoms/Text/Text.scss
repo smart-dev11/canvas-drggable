@@ -1,0 +1,5 @@
+@import '../../../styles/_variables.scss';
+
+.text-block {
+  @extend h3;
+}
